@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HGBao Linktree</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    overflow-x: hidden;
+    background: black;
+  }
+
+  #splash {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  #splash span {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.4rem;
+    border-radius: 12px;
+    background: #ffffff18;
+    color: white;
+    backdrop-filter: blur(12px);
+    transition: background 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  #splash:hover span {
+    background: #ffffff30;
+  }
+
+  body.loaded {
+    background-image: url("https://files.catbox.moe/xextq9.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  body.loaded::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 0;
+  }
+
+  #main {
+    position: relative;
+    z-index: 1;
+    display: none;
+    animation: fadeInUp 1s ease both;
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  img {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid rgba(255,255,255,0.3);
+  }
+
+  h1.main-title {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 1rem;
+    margin: 0.5rem auto;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background 0.2s;
+    backdrop-filter: blur(10px);
+  }
+
+  .link:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .link i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+  }
+
+  table {
+    margin: 2rem auto;
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    backdrop-filter: blur(6px);
+  }
+
+  th, td {
+    padding: 0.75rem;
+    color: #ddd;
+  }
+
+  thead {
+    background: rgba(255,255,255,0.1);
+  }
+
+  th {
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    font-weight: 600;
+  }
+
+  td {
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .svg-icon {
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+    margin-right: 8px;
+    fill: white;
+  }
+</style>
+
+  <div id="splash" onclick="enterSite()">
+    <span>Click bất kỳ đâu để vào</span>
+  </div>
+
+<!-- Main -->
+<div id="main">
+  <img src="https://files.catbox.moe/hzo3ds.jpeg" alt="Avatar">
+  <h1 class="main-title">HGBao</h1>
+
+  <a class="link" href="https://github.com/hoangiabaol" target="_blank">
+    <i class="fab fa-github"></i> GitHub
+  </a>
+  <a class="link" href="https://discordapp.com/users/880033934954627093" target="_blank">
+    <i class="fab fa-discord"></i> Discord
+  </a>
+  <a class="link" href="https://www.youtube.com/@Itz_HGBao_09" target="_blank">
+    <i class="fab fa-youtube"></i> YouTube
+  <a class="link" href="https://www.roblox.com/users/hgbao029/profile" target="_blank">
+  <svg class="svg-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="white">
+    <path d="M118.5 0L0 393.5 393.5 512 512 118.5 118.5 0zm186.9 295.6l-88-22-22-88 88 22 22 88z"/>
+  </svg>      
+  Roblox
+</a>
+
+  <!-- Ghi chú bảng -->
+  <table>
+    <thead>
+      <tr>
+        <th>Chủ đề</th>
+        <th>Ghi chú</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+  <td>Ngôn ngữ lập trình</td>
+  <td style="text-align: left;">
+    <i class="fab fa-python"></i> Python &nbsp;|&nbsp;
+    <i class="fab fa-js-square"></i> JavaScript &nbsp;|&nbsp;
+    <i class="fab fa-java"></i> Java &nbsp;|&nbsp;
+    <i class="fas fa-code"></i> TypeScript
+  </td>
+</tr>
+      <tr>
+        <td>Minecraft Server</td>
+        <td>Paper / Folia + plugin custom</td>
+      </tr>
+      <tr>
+        <td>Btw</td>
+        <td>Tôi thích mèo nhưng không biết tại sao</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  <audio id="bgMusic" src="" preload="auto"></audio>
+
+ <script>
+  function enterSite() {
+    const music = document.getElementById('bgMusic');
+
+    // Mảng danh sách nhạc
+    const musicList = [
+      "https://files.catbox.moe/abc123.mp3",
+      "https://files.catbox.moe/xyz456.mp3",
+      "https://files.catbox.moe/def789.mp3"
+    ];
+
+    //random 1 bài
+    const randomIndex = Math.floor(Math.random() * musicList.length);
+    music.src = musicList[randomIndex];
+    music.volume = 0.7; 
+    music.play().catch(() => {});
+
+    document.body.classList.add('loaded');
+    document.getElementById('splash').style.display = 'none';
+    document.getElementById('main').style.display = 'block';
+  }
+</script>
+</body>
+</html>
